@@ -54,14 +54,54 @@
 		E6302C2B20303B41008AFF0E /* Awesome Weather */ = {
 			isa = PBXGroup;
 			children = (
+				E6302C4220303B96008AFF0E /* Extras */,
+				E6302C4120303B8F008AFF0E /* Extensions */,
+				E6302C4020303B88008AFF0E /* Model */,
+				E6302C3F20303B83008AFF0E /* View */,
+				E6302C3E20303B73008AFF0E /* Controller */,
 				E6302C2C20303B41008AFF0E /* AppDelegate.swift */,
-				E6302C2E20303B41008AFF0E /* ViewController.swift */,
 				E6302C3020303B41008AFF0E /* Main.storyboard */,
 				E6302C3320303B41008AFF0E /* Assets.xcassets */,
 				E6302C3520303B41008AFF0E /* LaunchScreen.storyboard */,
 				E6302C3820303B41008AFF0E /* Info.plist */,
 			);
 			path = "Awesome Weather";
+			sourceTree = "<group>";
+		};
+		E6302C3E20303B73008AFF0E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E6302C2E20303B41008AFF0E /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E6302C3F20303B83008AFF0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E6302C4020303B88008AFF0E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E6302C4120303B8F008AFF0E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E6302C4220303B96008AFF0E /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extras;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
