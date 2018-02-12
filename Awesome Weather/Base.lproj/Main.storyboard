@@ -83,6 +83,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cityName" destination="Y8d-dD-DHh" id="Cfs-On-TaS"/>
+                        <outlet property="currentCityTemp" destination="n8y-tL-3Yn" id="xkd-Vq-cA1"/>
+                        <outlet property="currentDate" destination="n35-5g-75q" id="kEZ-ox-HMb"/>
+                        <outlet property="specialBG" destination="95L-NP-IAM" id="tjN-Zw-2ch"/>
+                        <outlet property="weatherImage" destination="bE2-Kg-Pno" id="0ac-Sw-EJU"/>
+                        <outlet property="weatherType" destination="qz2-CC-c0c" id="MYJ-Ek-aEJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
