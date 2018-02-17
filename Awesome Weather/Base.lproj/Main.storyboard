@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -63,10 +64,52 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bzI-Ss-0P2">
+                                <rect key="frame" x="0.0" y="368.5" width="375" height="298.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ForecastCell" rowHeight="70" id="aQl-3R-mRN" customClass="ForecastCell" customModule="Awesome_Weather" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aQl-3R-mRN" id="POm-L6-G3g">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s09-9r-mQw">
+                                                    <rect key="frame" x="315" y="18" width="35" height="34"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="29"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Q8-FJ-Wxn">
+                                                    <rect key="frame" x="25" y="20" width="95" height="29"/>
+                                                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="4Q8-FJ-Wxn" firstAttribute="centerY" secondItem="POm-L6-G3g" secondAttribute="centerY" id="HGt-hE-HKc"/>
+                                                <constraint firstItem="4Q8-FJ-Wxn" firstAttribute="leading" secondItem="POm-L6-G3g" secondAttribute="leadingMargin" constant="10" id="nEq-tU-JJ0"/>
+                                                <constraint firstItem="s09-9r-mQw" firstAttribute="centerY" secondItem="4Q8-FJ-Wxn" secondAttribute="centerY" id="pdn-18-qVg"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="s09-9r-mQw" secondAttribute="trailing" constant="10" id="zf5-Ng-Xh4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="forecastDay" destination="4Q8-FJ-Wxn" id="B0i-gO-tT3"/>
+                                            <outlet property="forecastTemp" destination="s09-9r-mQw" id="BOV-Qf-B7V"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="bzI-Ss-0P2" firstAttribute="top" secondItem="n35-5g-75q" secondAttribute="bottom" constant="60" id="2q8-nX-5Kb"/>
                             <constraint firstItem="95L-NP-IAM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-50" id="5GQ-PQ-aRD"/>
+                            <constraint firstItem="bzI-Ss-0P2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7NJ-ek-C3N"/>
                             <constraint firstItem="n35-5g-75q" firstAttribute="top" secondItem="n8y-tL-3Yn" secondAttribute="bottom" constant="4" id="C5v-VY-IMP"/>
                             <constraint firstItem="bE2-Kg-Pno" firstAttribute="top" secondItem="qz2-CC-c0c" secondAttribute="bottom" constant="6" id="GLA-lN-g2J"/>
                             <constraint firstItem="n8y-tL-3Yn" firstAttribute="top" secondItem="bE2-Kg-Pno" secondAttribute="bottom" constant="4" id="RpV-ZP-DaQ"/>
@@ -79,6 +122,8 @@
                             <constraint firstItem="qz2-CC-c0c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ck4-Ty-DfY"/>
                             <constraint firstItem="95L-NP-IAM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="50" id="fXI-R8-S0D"/>
                             <constraint firstItem="95L-NP-IAM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="50" id="oAZ-cG-hyb"/>
+                            <constraint firstItem="bzI-Ss-0P2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rTN-Wg-3F7"/>
+                            <constraint firstItem="bzI-Ss-0P2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ykc-m8-tW5"/>
                             <constraint firstItem="95L-NP-IAM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-50" id="zIn-OX-uZK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -88,6 +133,7 @@
                         <outlet property="currentCityTemp" destination="n8y-tL-3Yn" id="xkd-Vq-cA1"/>
                         <outlet property="currentDate" destination="n35-5g-75q" id="kEZ-ox-HMb"/>
                         <outlet property="specialBG" destination="95L-NP-IAM" id="tjN-Zw-2ch"/>
+                        <outlet property="tableView" destination="bzI-Ss-0P2" id="MKG-zB-UOp"/>
                         <outlet property="weatherImage" destination="bE2-Kg-Pno" id="0ac-Sw-EJU"/>
                         <outlet property="weatherType" destination="qz2-CC-c0c" id="MYJ-Ek-aEJ"/>
                     </connections>

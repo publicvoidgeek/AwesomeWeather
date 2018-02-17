@@ -46,23 +46,26 @@ class CurrentWeather {
         return _currentTemp
     }
     
+    /// Downloading Current Weather Data
+    ///
+    /// - Parameter completed: Completion Handler. 
     func downloadCurrentWeather(completed: @escaping DownloadComplete){
         Alamofire.request(API_URL).responseJSON { (response) in
             //print(response)
-            print(response)
+            //print(response)
             let result = response.result
             //print(result.value)
             let json = JSON(result.value)
             self._cityName = json["name"].stringValue
             let tempDate = json["dt"].double
-            print(tempDate)
+            //print(tempDate)
             let convertedDate = Date(timeIntervalSince1970: tempDate!)
             let dateFormatter = DateFormatter()
             dateFormatter.dateStyle = .medium
             dateFormatter.timeStyle = .none
             let currentDate = dateFormatter.string(from: convertedDate)
             self._date = "\(currentDate)"
-            print(currentDate)
+            //print(currentDate)
             self._weatherType = json["weather"][0]["main"].stringValue
             let downloadedTemp = json["main"]["temp"].double
             self._currentTemp = (downloadedTemp! - 273.15).rounded(toPlaces: 0)
